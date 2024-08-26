@@ -1,0 +1,47 @@
+$desktop: 1000px;
+$tablet: 600px;
+.toggle{
+    @media (max-width: $tablet) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+.container{
+    //@media (min-width: $tablet ) and (max-width: $desktop) 
+  
+    // @media (max-width: $tablet) {
+    //     font-size: 8px;
+    // }
+    color:white;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    //font-family: 'Abel'
+}
+
+.left{
+    // @media (max-width: $tablet) {
+    //     margin-right: 5px;
+    //     transform: translateY(-2px);
+    // }
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+    margin-right: 7px;
+    transform: translateY(-4px);
+}
+
+.right{
+    // @media (max-width: $tablet) {
+    //     margin-left: 8px;
+    //     transform: translateY(-2px);
+    // }
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+    margin-left: 10px;
+    transform: translateY(-4px);
+}

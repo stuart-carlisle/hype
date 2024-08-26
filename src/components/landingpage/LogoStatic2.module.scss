@@ -1,0 +1,79 @@
+.logoBackgroundStatic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #070707;
+    z-index: 6;
+}
+
+.logoInnerStatic{
+    filter: brightness(0.4);
+    z-index: 7;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logoBackgroundColorsStatic{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  background: linear-gradient(35deg, #666, #fa0471);
+  transform: translate(-50%, -50%) scale(1);
+  filter: blur(600px) hue-rotate(220deg);
+}
+
+.loadingBarContainer{
+    width: 200px;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.loadingBar{
+    position: relative;
+    height: 5px;
+    background: #fa0471;
+    border-radius: 5px;
+    filter: brightness(0.8);
+    box-shadow: inset -1px -1px 3px 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.loadingBar::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 6px;
+    background: #fa0471;
+    border-radius: 5px;
+    filter: blur(5px);
+    margin: auto 0;
+    z-index: -1;
+}
+
+.loadingFontContainer{
+    display: flex;
+    flex-direction: column;
+    color: #ddd;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,calc(-50% + 110px));
+    font-size: 20px;
+}
+
+.loadingFont{
+    text-align: center;
+}

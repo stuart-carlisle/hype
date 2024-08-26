@@ -1,0 +1,84 @@
+$desktop: 1000px;
+$tablet: 600px;
+$mobile: 400px;
+
+.title{
+    filter: drop-shadow(4px 4px 0 #C2166F);
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 130px;
+    font-size: 60px;
+    @media (max-width: $desktop) {
+        left: 50%;
+        top: 90px;
+        transform: translateX(-50%);
+        font-size: 50px;
+    }
+    @media (max-height: 700px) {
+        font: 40px;
+        top:70px;
+    }
+}
+
+.text{
+    color: white;
+    font-family: 'Abel';
+    font-size: 20px;
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    width: 30%;
+    filter: drop-shadow(0.5px 0.5px 2px rgba(0,0,0,0.5));
+    @media (max-width: $desktop) {
+        width: 70%;
+        left:50%;
+        top:200px;
+        font-size: 18px;
+        transform: translate(-50%);
+        text-align: center;
+    }
+    @media (max-width: $tablet) {
+        width: 90%;
+    }
+    @media (max-height: 700px) {
+        font: 16px;
+        top:160px;
+    }
+}
+
+.image{
+    width:100%;
+    min-width:800px;
+    left: 50%;
+    position:absolute;
+    bottom:20px;
+    transform: translate(-50%);
+    @media (max-width: $tablet) {
+        min-width:800px;
+        left: 50%;
+        position:absolute;
+        bottom: 20px;
+        transform: translate(-50%,0);
+    }
+    @media (max-width: $mobile) {
+        min-width:700px;
+        left: 50%;
+        position:absolute;
+        transform: translate(-50%,0);
+    }
+    @media (min-height: 900px){
+        min-width: 1000px;
+        left: 50%;
+        top:50%;
+        position:absolute;
+        transform: translate(-50%,-50%);
+    }
+    @media (max-height: 700px){
+        bottom: 0;
+    }
+    @media (max-height: 470px){
+        top: 50%;
+        transform:translate(-50%,-50%);
+    }
+}

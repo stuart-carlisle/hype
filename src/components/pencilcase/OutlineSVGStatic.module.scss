@@ -1,0 +1,29 @@
+.outline{
+    position: absolute;
+    width: 450px;
+    height: 250px;
+    left: 50%;
+    top: 50%;
+    z-index: 6;
+    transform: translate(-50%, -50%);
+}
+
+.outlinePathPLoopStatic{
+  stroke-dasharray: 200;
+  filter: blur(1.5px);
+}
+
+.outlinePathPLoopBlurStatic{
+    stroke-dasharray: 70.98695373535156;
+    filter: blur(20px);
+}
+
+.outlinePathStatic{
+    stroke-dasharray: 2726.968994140625;
+    filter: blur(1.5px);
+}
+
+.outlinePathBlurStatic{
+    stroke-dasharray: 2726.968994140625;
+    filter: blur(20px);
+}

@@ -1,0 +1,308 @@
+
+.customMetallicImage {
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(0px 0px 10px rgba(227, 14, 224, 0.8));
+  transform: skewX(-15deg) translate(calc(-100% - 5vh));
+  border: 1px solid #000;
+  border-radius: 1.4vh;
+  transition: border 0.3s ease;
+  width: 52.5vh;
+  height: 30vh;
+  top:60vh;
+  max-height:200px;
+  max-width: 350px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: border 0.2s ease;
+    .customFontMetallic {
+      color: darken(white, 0%);
+      transition: color 0.3s ease;
+    }
+    .scifiSmallText {
+      filter: brightness(1) drop-shadow(rgba(0, 0, 0, 0.8) 4px 4px 10px);
+      transition: filter 0.3s ease;
+    }
+  }
+  @media(max-aspect-ratio: 1.25){
+    top: 46vh;
+    transform: skewX(-15deg) translate(calc(-50%));
+    width: 40vh;
+    height: 24vh;
+  }
+}
+
+.customScifiImage {
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(0px 0px 10px rgba(227, 14, 224, 0.8));
+  transform: skewX(-15deg) translate(5vh, 0);
+  border: 1px solid #000;
+  border-radius: 1.4vh;
+  transition: border 0.3s ease;
+  width: 52.5vh;
+  height: 30vh;
+  top:60vh;
+  max-height:200px;
+  max-width: 350px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: border 0.2s ease;
+    .customFontMetallic {
+      color: darken(white, 0%);
+      transition: color 0.3s ease;
+    }
+    .scifiSmallText {
+      filter: brightness(1) drop-shadow(rgba(0, 0, 0, 0.8) 4px 4px 10px);
+      transition: filter 0.3s ease;
+    }
+  }
+  @media(max-aspect-ratio: 1.25){
+    top: 72vh;
+    transform: skewX(-15deg) translate(calc(-50%));
+    width: 40vh;
+    height: 24vh;
+  } 
+}
+
+
+.customMetallicImage::before {
+  content: '';
+  background: url('https://res.cloudinary.com/drixmykpt/image/upload/v1660144424/hype/images/fbp0mvfdsam4lyshq3ua.jpg') 0 0 no-repeat;
+  background-size: 62vh;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 0;
+  left: -10px;
+  z-index: -2;
+  transform: skew(15deg);
+  transition: filter 0.3s ease;
+}
+
+.customMetallicImage:hover::before {
+  filter: brightness(0.9) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+  transition: filter 0.3s ease;
+}
+
+
+.customScifiImage::before {
+  content: '';
+  background: url('https://res.cloudinary.com/drixmykpt/image/upload/v1660144425/hype/images/lghfqqvf6h9rhwvghnp2.png') 0 0 no-repeat;
+  background-size: 60vh;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: -10px;
+  z-index: -2;
+  transform: skew(15deg);
+  transition: filter 0.3s ease;
+}
+
+.customScifiImage:hover::before{
+  filter: brightness(0.9) drop-shadow(0px 0px 10px rgba(0,0,0,0.8));
+  transition: filter 0.3s ease;
+}
+
+.bevel {
+  position: absolute;
+  box-shadow: inset 0.5vh 0.5vh 0.5vh rgba(255, 255, 255, 0.8), inset -0.5vh -0.5vh 0.5vh rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  border-radius: 1.3vh;
+  left: 0;
+  top: 0;
+}
+
+
+.customFont {
+  color: white;
+  font-family: 'Abel', 'Agency FB';
+  font-size: 4vh;
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  width: 50%;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+  transform: translateX(-50%);
+  text-align: center;
+  letter-spacing: 2px;
+  @media(max-height: 400px){
+    font-size: 14px;
+  }
+  @media(max-width: 800px){
+    width: 80%;
+  }
+  @media(max-aspect-ratio: 1.25){
+    width: 80%;
+    top: 30vh;
+  }
+  @media(max-width:600px) and (max-aspect-ratio: 1.25){
+    font-size: 3.4vw;
+  }
+  @media(max-width:400px) and (max-aspect-ratio: 1.25){
+    font-size: 5vw;
+  }
+  @media(min-height:801px) and (max-aspect-ratio: 1.25){
+    font-size: 4vw;
+  }
+}
+
+.border {
+  border-left: #ddd 2px solid;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+  background: black;
+  width: 60vw;
+  height: 100%;
+  transform: skew(-15deg) translateX(-4%);
+}
+
+.hypeTitle {
+  margin-top: 4vh;
+  object-fit: cover;
+  height: 17vh;
+  width: 75vh;
+  transform: translateX(-50%);
+  @media(max-aspect-ratio: 1.25){
+    height: 10vh;
+    width: 47vh;
+  }
+}
+
+.customTitle {
+  margin-top: 11vh;
+  object-fit: cover;
+  height: 20vh;
+  width: 80vh;
+  max-width: 100vw;
+  transform: translateX(-50%);
+  @media(max-aspect-ratio: 1.25){
+    height: 12vh;
+    width: 47vh;
+  }
+}
+
+.sun {
+  margin-top: 0.5vh;
+  object-fit: cover;
+  height: 40vh;
+  width: 40vh;
+  transform: translateX(-50%);
+  @media(max-aspect-ratio: 1.25){
+    height: 29vh;
+    width: 29vh;
+  }
+}
+
+
+.scifiSmallText {
+  filter: brightness(0.9) drop-shadow(rgba(0, 0, 0, 0.8) 4px 4px 10px);
+  position: absolute;
+  bottom: 6vh;
+  left: 50%;
+  transform: translate(-50%) skew(15deg);
+  max-height: 30px;
+  height: 6vh;
+  transition: filter 0.3s ease;
+}
+
+.metallicSmallText {
+  filter: brightness(0.9) drop-shadow(rgba(0, 0, 0, 0.8) 4px 4px 10px);
+  position: absolute;
+  bottom: 6vh;
+  left: 50%;
+  transform: translate(-50%) skew(15deg);
+  max-height: 30px;
+  height: 6vh;
+  transition: filter 0.3s ease;
+}
+
+.customFontMetallic {
+  color: darken(white, 30%);
+  font-family: 'Abel', 'Agency FB';
+  font-size: 3vh;
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, 0) skew(15deg);
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+  text-align: center;
+  letter-spacing: 0.5vh;
+  transition: color 0.3s ease;
+  margin-left: 1.5vh;
+}
+
+.customFontSoon{
+    color: white;
+    font-family: "Abel", "Agency FB";
+    position: absolute;
+    font-size: 3vh;
+    top: 0.5vh;
+    left:50%;
+    transform: translateX(-50%) skew(15deg);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+    text-align: center;
+    letter-spacing: 0.5vh;
+    width: 100%;
+  }
+
+.fontSoonContainer{
+  background: #070707EE;
+  height: 5vh;
+}
+
+.background{
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px inset, rgba(0, 0, 0, 0.8) -6px 0px 6px inset;
+  filter: drop-shadow(rgba(240, 36, 226, 0.8) 0px 0px 40px);
+  border-right: 4px solid rgb(216, 24, 187);
+  transform: skew(-15deg) translateX(-7%);
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #522a83,#9933b3, #c83ace 80%) repeat scroll 0% 0%;
+  width: 100vw;
+  height: 100%;
+  overflow:hidden;
+}
+
+.background::before{
+  content: "";
+  background: url('https://res.cloudinary.com/drixmykpt/image/upload/v1660224648/hype/images/zby87lueibkhdzzksrv4.jpg') 0 0 no-repeat;
+  background-size:2400px;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  transform: skew(15deg);
+  background-repeat: repeat-x;
+}
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+   rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}

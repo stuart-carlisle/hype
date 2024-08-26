@@ -1,0 +1,250 @@
+$desktop: 1230px;
+$tablet: 600px;
+$mobile: 400px;
+
+.title {
+  filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.8));
+  margin-top: 80px;
+  margin-right: 10px;
+  object-fit: contain;
+  //object-position: 50% 50%;
+  width: 400px;
+  transform: translate(calc(100vw - 100% - 10px));
+  @media (max-width: 1100px){
+    margin-top: 80px;
+  }
+  @media (max-width: 1000px){
+    width: 350px;
+  }
+  @media (max-width: 800px){
+    transform: translate(calc(50vw - 50%));
+    width: 400px;
+  }
+  @media (max-width: 600px){
+    margin-top: 100px;
+  }
+  @media (max-width: 400px){
+    width: 350px;
+  }
+  @media (max-width: 350px){
+    max-width: 99vw;
+  }
+}
+
+.text {
+  text-align: center;
+  margin: 5px;
+  filter: drop-Shadow(1px 1px 3px rgba(0,0,0,.8));
+}
+
+.image {
+  position: relative;
+  height: 100%;
+  margin: auto 0;
+  display: flex;
+  min-height: 600px;
+ // min-width: 700px;
+  @media (max-width: 800px){
+   // min-width: 0;
+    max-width: 90vw;
+    object-fit:cover;
+    object-position: left;
+  }
+}
+
+.image::before {
+  content: '';
+  width: 30px;
+  height: 100%;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.image::after {
+  content: '';
+  width: 30px;
+  height: 100%;
+  background: whitesmoke;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin scrimGradient($startColor: $color-black, $direction: 'to bottom') {
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0
+  );
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+  background: linear-gradient(unquote($direction), $stops);
+}
+
+.gradient {
+  @include scrimGradient(#373e3b, 'to left');
+  height: 100%;
+  transform: translateX(-80%);
+  width: 40vw;
+
+  @media (max-width: 800px){
+    width:80vw;
+  }
+  @media (max-width: 600px){
+    width:100vw;
+  }
+  @media (max-width: 300px){
+    width:150vw;
+  }
+}
+.backgroundCover{
+  background: linear-gradient(to right, #282d2b 40%, #000  100%);
+  width: 40vw;
+  height: 100%;
+  transform: translateX(-2%);
+  @media(max-width:400px){
+    width: 80vw;
+  }
+  @media(max-width:350px){
+    width: 120vw;
+  }
+}
+.mainPanel {
+  filter: drop-shadow(0px 0px 50px orangered);
+  background: linear-gradient(to left, #000 0%, #37413e 100%);
+  width: 70vw;
+  height: 100%;
+  border-left: #ddd 2px solid;
+  border-right: #ddd 2px solid;
+  transform: skewX(-15deg) translate(56vw);
+  @media (max-width: 1200px){
+    width:90vw;
+  }
+  @media (max-width: 800px){
+    width:150vw;
+  }
+  @media (max-width: 600px){
+    width:200vw;
+  }
+  @media (max-width: 400px){
+    width:250vw;
+  }
+}
+
+.textPanel{
+  display: flex;
+  flex-direction: column;
+  color: #ddd;
+  font-size:20px;
+  font-family: Abel;
+  box-shadow:inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+  background: #37413E;
+  width: 400px;
+  height:400px;
+  transform: skewX(-15deg) translate(calc(56vw + 30%),170px);
+  @media (max-width: 1200px){
+    transform: skewX(-15deg) translate(calc(56vw + 20%),170px);
+  }
+  @media (max-width: 1100px){
+    transform: skewX(-15deg) translate(calc(56vw + 10%),170px);
+  }
+  @media (max-width: 800px){
+    transform: skewX(-15deg) translate(calc(50vw - 35%),calc(50vh - 50%));
+    max-width: 80vw;
+  }
+  @media (max-width: 500px){
+    transform: skewX(0deg) translate(calc(50vw - 50%),calc(50vh - 50%));
+    max-width: 90vw;
+    height:max-content;
+  }
+  @media (max-width: 280px){
+    // transform: skew(0deg) translate(calc(50vw - 50%),calc(100vh - 100% - 20px));
+    font-size: 15px;
+  }
+}
+.textContainer{
+  margin: auto 0;
+  transform: skew(15deg) translateX(-30px);
+  width: 110%;
+  @media (max-width: 500px){
+    transform: skewX(0deg) translateX(0px);
+    width:100%;
+    max-width: 90vw;
+  }
+
+}
+
+.leftBoundary{
+  margin: 5px;
+  width: 90px;
+  height: 350px;
+  float: left;
+  shape-outside: polygon(0 0, 100% 0, 0 100%);
+  @media (max-width: 500px){
+    display: none;
+  }
+}
+
+.rightBoundary{
+  margin: 5px;
+  width: 90px;
+  height: 350px;
+  float: right;
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+  @media (max-width: 500px){
+    display: none;
+  }
+}
+
+.textPanelOuter{
+  width: 50vh;
+  height: 40vh;
+}
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+   rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}

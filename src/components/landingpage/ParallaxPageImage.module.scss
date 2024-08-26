@@ -1,0 +1,39 @@
+$desktop: 1000px;
+$tablet: 600px;
+
+.fade{
+    position: relative;
+    @media (max-width: $tablet) {
+        width: 100vw;
+        object-fit: cover;
+    }
+}
+  
+  .fade::before{
+    content: '';
+    width: 30px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left:0;
+    top:0;
+  }
+  
+  .fade::after{
+    content: '';
+    width: 30px;
+    height: 100%;
+    background: whitesmoke;
+    position: absolute;
+    right:0;
+    top:0;
+  }
+  
+  .layer{
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, black, transparent);
+    position: absolute;
+    right:0;
+    top:0;
+  }

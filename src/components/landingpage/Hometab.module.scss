@@ -1,0 +1,14 @@
+.infoHome {
+  opacity: 1;
+  position: absolute;
+  transform: scale(0.2);
+  transform-origin: left top;
+  top: 0px;
+  left: 0px;
+  transition: filter 0.4s ease;
+  filter: brightness(0.7);
+  &:hover {
+    filter: brightness(1);
+    cursor: pointer;
+  }
+}

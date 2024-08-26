@@ -1,0 +1,332 @@
+$tablet: 700px;
+$mobile: 420px;
+.minimizedCellContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  box-shadow: 0px 0px 1px 2px #464646;
+  transition: background 0.3s ease;
+  background: #070707;
+  background-image: none;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.minimizedCellImage {
+  margin: 10px auto;
+  filter: drop-shadow(0 1px 1px black);
+}
+
+.minimizedCellFont {
+  @media (max-width: $tablet) {
+    font-size: 12px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: none;
+    filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.6));
+  }
+  font-size: 15px;
+  color: #ddd;
+  text-align: center;
+  background: #070707;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.stripe {
+  @media (max-width: 600px) {
+    width: 300px;
+    transform: skewX(-35deg) translate(-90%, 0);
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewX(-35deg) translate(-50%, 0);
+  width: 350px;
+  height: 100%;
+  box-shadow: inset 0px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(3px 0px 6px rgba(0, 0, 0, 0.5));
+}
+
+.gridContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  transform: translateY(calc(100% - 18px));
+  transition: transform 0.8s ease;
+  z-index: 5;
+  cursor: default;
+  max-height: 90vh;
+}
+
+.gridContainerOpen {
+  @extend .gridContainer;
+  transform: translateY(0px);
+  transition: transform 0.8s ease;
+  max-height: 90vh;
+}
+
+.gridContainerTop {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  right: 0;
+}
+
+.gridContainerFlex {
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+  @media (max-width: 350px) {
+    padding: 0 5px;
+  }
+  display: flex;
+  padding: 0 10px;
+  height: 100%;
+}
+
+.gridContainerDescription {
+  width: max-content;
+  z-index: 1;
+  h1 {
+    @media (max-width: 350px) {
+      font-size: 30px;
+    }
+    color: #fa0471;
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 600;
+    font-family: 'Road Rage';
+    filter: drop-shadow(1px 1px 1px #070707);
+    margin: 0 5px;
+    transform: translate(0, -30px);
+    max-width: 90vw;
+  }
+}
+
+.maximizedCell {
+  height: 100%;
+  max-height: 85vh;
+  filter: brightness(100%) drop-shadow(0.5px 0.25px 1px #070707);
+  border-radius: 5px;
+  &:hover {
+    filter: brightness(90%) drop-shadow(1px 0.5px 2px #070707);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+  transition: filter 0.3s ease, background 1s ease, border-radius 0.5s ease;
+}
+
+.backButton {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding-top: 15px;
+  width: max-content;
+  color: #070707;
+  transition: color 0.2s ease;
+  &:hover {
+    cursor: pointer;
+    color: lighten(#070707, 50%);
+    transition: color 0.2s ease;
+  }
+}
+
+.descriptionImage {
+  filter: drop-shadow(1px 3px 3px black);
+  width: 300px;
+  height: 100px;
+  max-width: 95vw;
+}
+
+.descriptionFont {
+  @media (max-width: 350px) {
+    font-size: 15px;
+  }
+  margin: 0px 5px;
+  transform: translate(0px, -25px);
+  color: rgb(221, 221, 221);
+  filter: drop-shadow(rgba(0, 0, 0, 0.8) 0.5px 0.5px 1px);
+  font-size: 25px;
+}
+
+.descriptionText {
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.maximizedCellModel {
+  @media (max-width:399px){
+    height:640px;
+  }
+  @media (min-width: 400px) and (max-width:599px){
+    height:540px;
+  }
+  @media (min-width: 600px) and (max-width:999px){
+    height:330px;
+  }
+  height: 218px;
+  max-height: 85vh;
+  filter: brightness(100%) drop-shadow(0.5px 0.25px 1px #070707);
+  border-radius: 5px;
+  background: #070707;
+  &:hover {
+    filter: brightness(90%) drop-shadow(1px 0.5px 2px #070707);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+  transition: filter 0.3s ease, background 1s ease, border-radius 0.5s ease;
+}
+
+.mainGrid{
+  background: #070707;
+  box-shadow: inset 0px 2px 4px 2px  rgba(200, 200, 200, 0.2);
+  filter: drop-shadow(3px 0px 6px rgba(0, 0, 0, 0.5));
+}
+
+.iconContainer{
+  background: var(--bg-color);
+  //background: #070707;
+  height: 100%;
+  margin: auto;
+  //background: #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  box-shadow: 0px 0px 1px 2px rgba(70, 70, 70, 1);
+  transition: background 0.3s ease;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.iconContainerDown{
+  @extend .iconContainer;
+  &:hover {
+    cursor: default;
+  }
+  transition: background 1s ease;
+  background: #fa0471;
+}
+
+.ringContainer{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40px);
+}
+
+.ring{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.ringDown{
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 20%, #070707);
+  animation: ring-animation 1.5s forwards ease;
+}
+
+.ringDown:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  top: 5px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.ringDown:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #fa0471);
+  z-index: 1;
+  filter: blur(38px);
+}
+
+
+.icon{
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+  transition: filter 0.5s ease;
+  transition-delay: 0.2s;
+}
+
+.iconDown{
+  @extend .icon;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.7));
+  transition: filter 0.3s ease;
+}
+
+.iconFont{
+  font-size: 12px;
+  color: #ddd;
+  text-align: center;
+  background: #070707;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.cell{
+  height: 100%;
+  filter: brightness(100%) drop-shadow(0.5px 0.25px 1px #070707);
+  border-radius: 5px;
+  &:hover {
+    filter: brightness(90%) drop-shadow(1px 0.5px 2px #070707);
+    transition: filter 0.3s ease;
+  }
+  transition: filter 0.3s ease;
+}
+
+.cellIconDown{
+  height: 100%;
+  border-radius: 5px;
+  filter: brightness(100%) drop-shadow(1px 0.5px 2px #070707);
+  transition: filter 0.3s ease;
+}
+
+@keyframes ring-animation {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+
