@@ -58,7 +58,7 @@ const Main = () => {
   ); for remote*/
 
   //get clips from the model
-  const { mixer, clips, ref: animationsRef } = useAnimations(animations)
+  const { clips, ref: animationsRef } = useAnimations(animations)
 
   //setup refs for animated meshes
   const tray = useRef()
@@ -97,7 +97,6 @@ const Main = () => {
     rubber,
     clasp,
   }
-
   //set up animation mixers array
   const mixers = []
   for (let i = 0; i < clips.length; i++) {
@@ -507,7 +506,7 @@ const Main = () => {
       })
       if (!snap.rubberOpen) {
         const action2 = getAnimation({
-          clipName: 'RubberOpenAction_Rubber',
+          clipName: 'RubberOpenAction',
           mixers,
           clips,
           objectRef: rubberTray.current,
