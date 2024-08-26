@@ -1,7 +1,6 @@
 $desktop: 1000px;
 $tablet: 600px;
 $mobile: 400px;
-@import url('http://fonts.cdnfonts.com/css/road-rage');
 
 .title {
   filter: drop-shadow(4px 4px 0 #c2166f);
@@ -10,7 +9,7 @@ $mobile: 400px;
   top: 70px;
   left: 130px;
   font-size: 60px;
-  font-family: 'Road Rage';
+  font-family: 'roadrage';
   @media (max-width: $desktop) {
     left: 50%;
     top: 90px;

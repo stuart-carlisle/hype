@@ -1,6 +1,5 @@
 $mobile: 300px;
 $tablet: 600px;
-@import url('http://fonts.cdnfonts.com/css/road-rage');
 
 .fontTitleMaximized {
   @media (max-width: $tablet) {
@@ -11,7 +10,7 @@ $tablet: 600px;
   color: #fa0471;
   font-size: 24px;
   padding-top: 5px;
-  font-family: 'Road Rage';
+  font-family: 'roadrage';
 }
 
 .fontMaximized {
@@ -25,7 +24,7 @@ $tablet: 600px;
   font-size: 14px;
   margin: auto;
   padding: 5px 10px;
-  font-family: 'Road Rage';
+  font-family: 'roadrage';
 }
 
 .gifImageContainer {
@@ -223,5 +222,5 @@ $tablet: 600px;
   line-height: 13px;
   text-align: center;
   color: #ddd;
-  font-family: 'Road Rage';
+  font-family: 'roadrage';
 }
