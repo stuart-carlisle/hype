@@ -1,5 +1,7 @@
 $desktop: 1000px;
 $tablet: 600px;
+@import url('http://fonts.cdnfonts.com/css/road-rage');
+
 .toggle {
   @media (max-width: $tablet) {
     left: 50%;
