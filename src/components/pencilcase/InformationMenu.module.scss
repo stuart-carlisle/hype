@@ -9,6 +9,7 @@ $tablet: 600px;
   color: #fa0471;
   font-size: 24px;
   padding-top: 5px;
+  font-family: 'Road Rage';
 }
 
 .fontMaximized {
@@ -22,6 +23,7 @@ $tablet: 600px;
   font-size: 14px;
   margin: auto;
   padding: 5px 10px;
+  font-family: 'Road Rage';
 }
 
 .gifImageContainer {
@@ -93,7 +95,10 @@ $tablet: 600px;
     transition: filter 0.3s ease;
     cursor: pointer;
   }
-  transition: filter 0.3s ease, background 1s ease, border-radius 0.5s ease;
+  transition:
+    filter 0.3s ease,
+    background 1s ease,
+    border-radius 0.5s ease;
 }
 
 .cellMaximized {
@@ -216,4 +221,5 @@ $tablet: 600px;
   line-height: 13px;
   text-align: center;
   color: #ddd;
+  font-family: 'Road Rage';
 }

@@ -121,7 +121,10 @@ $mobile: 420px;
     transition: filter 0.3s ease;
     cursor: pointer;
   }
-  transition: filter 0.3s ease, background 1s ease, border-radius 0.5s ease;
+  transition:
+    filter 0.3s ease,
+    background 1s ease,
+    border-radius 0.5s ease;
 }
 
 .backButton {
@@ -166,14 +169,14 @@ $mobile: 420px;
 }
 
 .maximizedCellModel {
-  @media (max-width:399px){
-    height:640px;
+  @media (max-width: 399px) {
+    height: 640px;
   }
-  @media (min-width: 400px) and (max-width:599px){
-    height:540px;
+  @media (min-width: 400px) and (max-width: 599px) {
+    height: 540px;
   }
-  @media (min-width: 600px) and (max-width:999px){
-    height:330px;
+  @media (min-width: 600px) and (max-width: 999px) {
+    height: 330px;
   }
   height: 218px;
   max-height: 85vh;
@@ -185,16 +188,20 @@ $mobile: 420px;
     transition: filter 0.3s ease;
     cursor: pointer;
   }
-  transition: filter 0.3s ease, background 1s ease, border-radius 0.5s ease;
+  transition:
+    filter 0.3s ease,
+    background 1s ease,
+    border-radius 0.5s ease;
 }
 
-.mainGrid{
+.mainGrid {
   background: #070707;
-  box-shadow: inset 0px 2px 4px 2px  rgba(200, 200, 200, 0.2);
+  box-shadow: inset 0px 2px 4px 2px rgba(200, 200, 200, 0.2);
   filter: drop-shadow(3px 0px 6px rgba(0, 0, 0, 0.5));
+  font-family: 'Road Rage';
 }
 
-.iconContainer{
+.iconContainer {
   background: var(--bg-color);
   //background: #070707;
   height: 100%;
@@ -212,7 +219,7 @@ $mobile: 420px;
   }
 }
 
-.iconContainerDown{
+.iconContainerDown {
   @extend .iconContainer;
   &:hover {
     cursor: default;
@@ -221,21 +228,21 @@ $mobile: 420px;
   background: #fa0471;
 }
 
-.ringContainer{
+.ringContainer {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -40px);
 }
 
-.ring{
+.ring {
   position: relative;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.ringDown{
+.ringDown {
   position: relative;
   width: 55px;
   height: 55px;
@@ -268,8 +275,7 @@ $mobile: 420px;
   filter: blur(38px);
 }
 
-
-.icon{
+.icon {
   height: 50px;
   width: 50px;
   margin: 0 auto;
@@ -278,13 +284,13 @@ $mobile: 420px;
   transition-delay: 0.2s;
 }
 
-.iconDown{
+.iconDown {
   @extend .icon;
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.7));
   transition: filter 0.3s ease;
 }
 
-.iconFont{
+.iconFont {
   font-size: 12px;
   color: #ddd;
   text-align: center;
@@ -295,7 +301,7 @@ $mobile: 420px;
   bottom: 0;
 }
 
-.cell{
+.cell {
   height: 100%;
   filter: brightness(100%) drop-shadow(0.5px 0.25px 1px #070707);
   border-radius: 5px;
@@ -306,7 +312,7 @@ $mobile: 420px;
   transition: filter 0.3s ease;
 }
 
-.cellIconDown{
+.cellIconDown {
   height: 100%;
   border-radius: 5px;
   filter: brightness(100%) drop-shadow(1px 0.5px 2px #070707);
@@ -328,5 +334,3 @@ $mobile: 420px;
     filter: hue-rotate(360deg);
   }
 }
-
-
