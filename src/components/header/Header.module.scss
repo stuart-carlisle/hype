@@ -1,31 +1,32 @@
-.headerGroupClosed{
+.headerGroupClosed {
   transform: scaleX(0);
-  transform-origin:left;
-  @media (max-width: 700px){
-      transform: scaleX(0) translate(4px);
+  transform-origin: left;
+  @media (max-width: 700px) {
+    transform: scaleX(0) translate(4px);
   }
-  @media (max-width: 600px){
-      transform: scaleX(0) translate(15px);
+  @media (max-width: 600px) {
+    transform: scaleX(0) translate(15px);
   }
-  @media( max-width: 500px){
-      transform: scaleX(0) translate(0px)
+  @media (max-width: 500px) {
+    transform: scaleX(0) translate(0px);
   }
 }
 
-.headerGroupOpen{
-  &:hover{
+.headerGroupOpen {
+  margin-top: 12px;
+  &:hover {
     cursor: pointer;
   }
   transform: scaleX(1);
-  transform-origin:left;
-  @media (max-width: 700px){
-      transform: scaleX(1) translate(4px);
+  transform-origin: left;
+  @media (max-width: 700px) {
+    transform: scaleX(1) translate(4px);
   }
-  @media (max-width: 600px){
-      transform: scaleX(1) translate(15px);
+  @media (max-width: 600px) {
+    transform: scaleX(1) translate(15px);
   }
-  @media( max-width: 500px){
-      transform: scaleX(1) translate(0px);
+  @media (max-width: 500px) {
+    transform: scaleX(1) translate(0px);
   }
 }
 
@@ -40,7 +41,7 @@
     transform: scale(1);
     transform-origin: top left;
     transition: transform 0.2s ease;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
   }
 }
 
@@ -53,7 +54,9 @@
   //background: black;
   overflow: hidden;
   top: 0;
-  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  animation:
+    noise-1 3s linear infinite alternate-reverse,
+    glitch 5s 5.05s infinite;
   width: 70px;
   height: 79px;
 }
@@ -67,7 +70,9 @@
   //background: black;
   overflow: hidden;
   top: 0;
-  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  animation:
+    noise-2 3s linear infinite alternate-reverse,
+    glitch 5s 5s infinite;
   width: 70px;
   height: 79px;
 }
@@ -80,7 +85,7 @@
   img {
     height: 79px;
     transform-origin: top left;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
   }
 }
 
@@ -94,63 +99,62 @@
     transform: scale(1);
     transform-origin: left;
     transition: transform 0.2s ease;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
   }
 }
 
 .glitchContainer {
-    &:hover{
-      cursor:pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
   position: absolute;
   transform: translate(-50%, -50%) skewX(0deg);
   top: 30px;
   left: 50px;
   z-index: 2;
-  }
+}
 
 .flex {
   display: flex;
   flex-direction: row;
-  @media( max-width: 500px){
+  @media (max-width: 500px) {
     flex-direction: column;
-    width:79px;
+    width: 79px;
   }
 }
 
-.mobileClosed{
+.mobileClosed {
   background: none;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   border-radius: 0 0px 0px 0px;
   z-index: 0;
-  transform-origin:top;
+  transform-origin: top;
   transform: scaleY(0);
 }
-.mobileOpen{
-  transform-origin:top;
+.mobileOpen {
+  transform-origin: top;
   transform: scaleY(1);
   background: none;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   border-radius: 0 0px 0px 0px;
   z-index: 4;
 }
 
-.mobileCells{
+.mobileCells {
   filter: brightness(1);
   cursor: auto;
   transition: filter 0.3s ease;
 }
 
-.mobileCells:hover{
+.mobileCells:hover {
   filter: brightness(1.5);
   cursor: pointer;
   transition: filter 0.3s ease;
 }
-
 
 @keyframes glitch {
   1% {
@@ -162,23 +166,23 @@
 }
 
 @keyframes noise-1 {
-    $steps: 30;
-    @for $i from 1 through $steps {
-      #{percentage($i*(1/$steps))} {
-        $top: random(100);
-        $bottom: random(101 - $top);
-        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-      }
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
     }
   }
+}
 
 @keyframes noise-2 {
-    $steps: 30;
-    @for $i from 0 through $steps {
-      #{percentage($i*(1/$steps))} {
-        $top: random(100);
-        $bottom: random(101 - $top);
-        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-      }
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
     }
   }
+}

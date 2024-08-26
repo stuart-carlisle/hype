@@ -12,10 +12,11 @@ const Logo = () => {
 
   const props = useSpring({ opacity: toggle ? 1 : 0, config: { duration: 500 } })
   useEffect(() => {
+    console.log(loaded)
     if (!toggle && active && loaded < 24) {
       setToggle(true)
     }
-    if (toggle && loaded === 24 && !active) {
+    if (toggle && loaded >= 24 && !active) {
       setToggle(false)
       setTimeout(() => {
         setVisible('none')
