@@ -3,24 +3,24 @@ $tablet: 600px;
 $mobile: 400px;
 
 .title {
-  filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.8));
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.8));
   margin-top: 90px;
   object-fit: contain;
   //object-position: 50% 50%;
   width: 400px;
-  transform: translate(30px);
-  @media (max-width: 1000px){
+  transform: translate(60px);
+  @media (max-width: 1000px) {
     transform: translate(calc(70px));
   }
-  @media (max-width: 800px){
+  @media (max-width: 800px) {
     transform: translate(calc(50vw - 50%));
     width: 500px;
   }
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     margin-top: 100px;
     max-width: 99vw;
   }
-  @media (max-width: 400px){
+  @media (max-width: 400px) {
     width: 350px;
   }
 }
@@ -28,7 +28,8 @@ $mobile: 400px;
 .text {
   text-align: center;
   margin: 5px;
-  filter: drop-Shadow(1px 1px 3px rgba(0,0,0,.8));
+  filter: drop-Shadow(1px 1px 3px rgba(0, 0, 0, 0.8));
+  font-size: 18px;
 }
 
 .image {
@@ -39,9 +40,9 @@ $mobile: 400px;
   min-height: 600px;
   //min-width: 700px;
   transform: translate(calc(100vw - 100%));
-  @media (max-width: 800px){
+  @media (max-width: 800px) {
     max-width: 90vw;
-    object-fit:cover;
+    object-fit: cover;
     object-position: right;
   }
   //z-index:-1;
@@ -81,7 +82,7 @@ $mobile: 400px;
     91: 0.021,
     95.2: 0.008,
     98.2: 0.002,
-    100: 0
+    100: 0,
   );
   $hue: hue($startColor);
   $saturation: saturation($startColor);
@@ -109,84 +110,84 @@ $mobile: 400px;
   border-left: #ddd 2px solid;
   border-right: #ddd 2px solid;
   transform: skewX(15deg) translate(-25vw);
-  @media (max-width: 1200px){
-    width:90vw;
+  @media (max-width: 1200px) {
+    width: 90vw;
     transform: skewX(15deg) translate(-60vw);
   }
-  @media (max-width: 800px){
-    width:150vw;
+  @media (max-width: 800px) {
+    width: 150vw;
     transform: skewX(15deg) translate(-100vw);
   }
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     transform: skewX(15deg) translate(-80%);
   }
 }
 
-.textPanel{
+.textPanel {
   display: flex;
   flex-direction: column;
   color: #ddd;
-  font-size:20px;
+  font-size: 20px;
   font-family: Abel;
-  box-shadow:inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+  box-shadow:
+    inset 2px 2px 2px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.4);
   background: linear-gradient(to left, #222, #000);
   width: 400px;
-  height:400px;
-  transform: skewX(15deg) translate(calc(17%),170px);
-  filter: drop-shadow(1px 1px 3px rgba(0,0,0,.8));
-  @media (max-width: 1100px){
-    transform: skewX(15deg) translate(calc(15%),170px);
+  height: 400px;
+  transform: skewX(15deg) translate(calc(17%), 170px);
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.8));
+  @media (max-width: 1100px) {
+    transform: skewX(15deg) translate(calc(15%), 170px);
   }
-  @media (max-width: 800px){
-    transform: skewX(15deg) translate(calc(50vw - 62.5%),calc(60vh - 50%));
+  @media (max-width: 800px) {
+    transform: skewX(15deg) translate(calc(50vw - 62.5%), calc(60vh - 50%));
     max-width: 80vw;
   }
-  @media (max-width: 500px){
-    transform: skewX(0deg) translate(calc(50vw - 50%),calc(50vh - 50%));
+  @media (max-width: 500px) {
+    transform: skewX(0deg) translate(calc(50vw - 50%), calc(50vh - 50%));
     max-width: 90vw;
-    height:max-content;
+    height: max-content;
   }
-  @media (max-width: 280px){
+  @media (max-width: 280px) {
     // transform: skew(0deg) translate(calc(50vw - 50%),calc(100vh - 100% - 20px));
     font-size: 15px;
   }
 }
-.textContainer{
+.textContainer {
   margin: auto 0;
   transform: skew(-15deg) translateX(-30px);
   width: 110%;
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     transform: skewX(0deg) translateX(0px);
-    width:100%;
+    width: 100%;
     max-width: 90vw;
   }
-
 }
 
-.leftBoundary{
+.leftBoundary {
   margin: 5px;
   width: 90px;
   height: 350px;
   float: left;
   shape-outside: polygon(0 0, 0 100%, 100% 100%);
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     display: none;
   }
 }
 
-.rightBoundary{
+.rightBoundary {
   margin: 5px;
   width: 90px;
   height: 350px;
   float: right;
-  shape-outside: polygon(100% 0, 0 0 ,100% 100%);
-  @media (max-width: 500px){
+  shape-outside: polygon(100% 0, 0 0, 100% 100%);
+  @media (max-width: 500px) {
     display: none;
   }
 }
 
-.textPanelOuter{
+.textPanelOuter {
   width: 50vh;
   height: 40vh;
 }
-
